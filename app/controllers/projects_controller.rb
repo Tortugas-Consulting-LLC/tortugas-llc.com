@@ -19,6 +19,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+    @users = User.all
   end
 
   # POST /projects
@@ -69,6 +70,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params[:project].permit(:title, :description)
+      params[:project].permit(:title, :description, :user_ids => [])
     end
 end

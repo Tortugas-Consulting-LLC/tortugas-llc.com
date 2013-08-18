@@ -21,6 +21,11 @@
     <%= f.text_area :description %>
   </div>
 
+  <h2>Users</h2>
+  <div class="field">
+  <%= f.collection_check_boxes :user_ids, User.all.order("email"), :id, :email %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
