@@ -47,3 +47,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'bootstrap-sass'
+
+gem 'font-awesome-rails'
