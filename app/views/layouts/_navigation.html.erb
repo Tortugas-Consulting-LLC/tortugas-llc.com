@@ -6,8 +6,8 @@
 <%= link_to "Tortugas LLC", root_path, :class => 'brand' %>
 <div class="nav-collapse collapse pull-right">
   <ul class="nav">
-      <li><%= link_to("Home",     root_path) %></li>
-      <li><%= link_to("About Us", about_index_path) %></li>
-      <li><%= link_to("Contact",  contact_index_path) %></li>
+      <li><%= link_to root_path do %><i class="icon-home"></i> Home<% end %></li>
+      <li><%= link_to about_index_path do %><i class="icon-question-sign"></i> About Us<% end %></li>
+      <li><%= link_to contact_index_path do %><i class="icon-envelope"></i> Contact<% end %></li>
   </ul>
 </div>
