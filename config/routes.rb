@@ -1,4 +1,5 @@
 TortugasLlcCom::Application.routes.draw do
+  devise_for :users
   get "contact/index"
   get "about/index"
   get "about/contributions"
