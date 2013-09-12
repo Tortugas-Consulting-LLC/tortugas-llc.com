@@ -1,5 +1,35 @@
 <h1><%= @project.title %></h1>
 <p><%= @project.description %></p>
 
+<p>Current balance is: <%= number_with_precision @total, { :precision => 2 } %> hours</p>
+
+<%= paginate @events %>
+
+<% if 0 < @events.count %>
+  <table>
+    <thead>
+      <th>Date</th>
+      <th>User</th>
+      <th>Description</th>
+      <th>Amount</th>
+    </thead>
+
+    <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.for %></td>
+          <td><%= event.user.email %></td>
+          <td><%= event.description %></td>
+          <td><%= number_with_precision event.amount, { :precision => 2 } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= paginate @events %>
+<% else %>
+  <p><em>There are no time events recorded for this project.</em></p>
+<% end %>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

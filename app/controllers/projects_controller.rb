@@ -10,6 +10,8 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @events = Event.where(project: @project).order('for desc').page(params[:page]).per(1)
+    @total = Event.where(project: @project).sum('amount')
   end
 
   # GET /projects/new
@@ -55,10 +57,15 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
-    @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url }
-      format.json { head :no_content }
+      if 0 == @project.events.count
+        @project.destroy
+        format.html { redirect_to projects_url }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to projects_url, alert: 'This project has events associated with it and cannot be deleted' }
+        format.json { head :no_content, status: :unprocessable_entity }
+      end
     end
   end
 
