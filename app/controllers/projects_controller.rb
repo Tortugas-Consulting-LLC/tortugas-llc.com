@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :ensure_logged_in
+  before_action :ensure_is_admin, only: [:edit, :update, :destroy]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
@@ -70,6 +72,19 @@ class ProjectsController < ApplicationController
   end
 
   private
+    def ensure_logged_in
+      if ! user_signed_in?
+        redirect_to new_user_session_path, alert: 'You must be logged in to view projects'
+      end
+    end
+
+    def ensure_is_admin
+      if ! current_user.is_admin
+        redirect_to projects_path, alert: 'You must be an admin user to perform these operations'
+      end
+    end
+
+
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
