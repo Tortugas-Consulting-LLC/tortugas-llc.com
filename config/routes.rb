@@ -2,6 +2,7 @@ TortugasLlcCom::Application.routes.draw do
   get "admin/index"
   devise_for :users
   get "contact/index"
+  post "contact/index", to: "contact#send_email"
   get "about/index"
   get "about/contributions"
   get "about/recommendations"
