@@ -23,7 +23,7 @@
 
   <h2>Users</h2>
   <div class="field">
-  <%= f.collection_check_boxes :user_ids, User.all.order("email"), :id, :email %>
+  <%= f.collection_check_boxes :user_ids, @users, :id, :name %>
   </div>
 
   <div class="actions">

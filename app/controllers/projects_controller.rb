@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   before_action :ensure_logged_in
   before_action :ensure_is_admin, only: [:edit, :update, :destroy]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :grab_users, only: [:edit, :new]
 
   # GET /projects
   # GET /projects.json
@@ -23,7 +24,6 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
-    @users = User.all
   end
 
   # POST /projects
@@ -93,5 +93,9 @@ class ProjectsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params[:project].permit(:title, :description, :user_ids => [])
+    end
+
+    def grab_users
+      @users = User.order(:name)
     end
 end
