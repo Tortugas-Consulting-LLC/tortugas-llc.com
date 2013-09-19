@@ -33,6 +33,8 @@
 
 <% if current_user.is_admin %>
   <br />
-  <%= link_to 'Edit', edit_project_path(@project) %> |
-  <%= link_to 'Back', projects_path %>
+  <div class="btn-group">
+    <button class="btn"><%= link_to 'Edit', edit_project_path(@project) %></button>
+    <button class="btn"><%= link_to 'Back', projects_path %></button>
+  </div>
 <% end %>

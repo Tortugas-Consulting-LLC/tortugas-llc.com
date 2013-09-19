@@ -6,11 +6,15 @@
     <dd><em><%= project.description %></em></dd>
     <% if current_user.is_admin %>
       <dd>
-        <%= link_to 'Edit', edit_project_path(project) %> |
-        <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <div class="btn-group">
+          <div class="btn btn-mini"><%= link_to 'Edit', edit_project_path(project) %></div> |
+          <div class="btn btn-mini btn-danger"><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        </div>
       </dd>
     <% end %>
   <% end %>
 </dl>
 
-<%= link_to 'New Project', new_project_path if current_user.is_admin  %>
+<div class="btn-group">
+  <div class="btn"><%= link_to 'New Project', new_project_path if current_user.is_admin  %></div>
+</div>
