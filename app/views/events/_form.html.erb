@@ -26,6 +26,11 @@
     <%= f.text_field :amount, :as => :float %>
   </div>
 
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.collection_select :user_id, @users, :id, :name %>
+  </div>
+
   <div class="actions">
     <%= f.submit  class: 'btn btn-primary' %>
   </div>
