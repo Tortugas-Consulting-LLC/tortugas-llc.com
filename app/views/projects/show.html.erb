@@ -12,6 +12,9 @@
       <th>User</th>
       <th>Description</th>
       <th>Amount</th>
+      <% if current_user.is_admin %>
+        <th>Actions</th>
+      <% end %>
     </thead>
 
     <tbody>
@@ -21,6 +24,15 @@
           <td><%= event.user.name %></td>
           <td><%= event.description %></td>
           <td><%= number_with_precision event.amount, { :precision => 2 } %></td>
+
+          <% if current_user.is_admin %>
+            <td>
+              <div class="btn-group">
+                <button class="btn btn-mini"><%= link_to 'Edit', edit_project_event_path(@project, event) %></button>
+                <button class="btn btn-mini btn-danger"><%= link_to 'Destroy', project_event_path(@project, event), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+              </div>
+            </td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>
@@ -32,9 +44,11 @@
 <% end %>
 
 <% if current_user.is_admin %>
-  <br />
-  <div class="btn-group">
-    <button class="btn"><%= link_to 'Edit', edit_project_path(@project) %></button>
-    <button class="btn"><%= link_to 'Back', projects_path %></button>
+  <div class="btn-toolbar">
+    <div class="btn-group">
+      <button class="btn btn-small"><%= link_to 'Back', projects_path %></button>
+      <button class="btn btn-small"><%= link_to 'Edit', edit_project_path(@project) %></button>
+      <button class="btn btn-small btn-primary"><%= link_to 'Add Event', new_project_event_path(@project) %></button>
+    </div>
   </div>
 <% end %>

@@ -15,6 +15,8 @@
   <% end %>
 </dl>
 
-<div class="btn-group">
-  <div class="btn"><%= link_to 'New Project', new_project_path if current_user.is_admin  %></div>
+<div class="btn-toolbar">
+  <div class="btn-group">
+    <div class="btn btn-small"><%= link_to 'New Project', new_project_path if current_user.is_admin  %></div>
+  </div>
 </div>

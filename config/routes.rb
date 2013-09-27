@@ -8,7 +8,9 @@ TortugasLlcCom::Application.routes.draw do
   get "about/recommendations"
   get "home/index"
 
-  resources :projects
+  resources :projects do
+    resources :events
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

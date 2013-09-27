@@ -1,5 +1,5 @@
 @import "bootstrap";
 body { padding-top: 60px; }
 .btn a { color: #555; }
-.btn.btn-danger a { color: #fff; }
+.btn.btn-danger a, .btn.btn-primary a { color: #fff; }
 @import "bootstrap-responsive";
