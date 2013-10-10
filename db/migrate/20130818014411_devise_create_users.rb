@@ -45,4 +45,17 @@ class DeviseCreateUsers < ActiveRecord::Migration
     # add_index :users, :unlock_token,         :unique => true
     # add_index :users, :authentication_token, :unique => true
   end
+
+  create_table :projects do |t|
+    t.string :title
+    t.text :description
+    t.decimal :default_rate
+
+    t.timestamps
+  end
+
+  create_table(:projects_users) do |t|
+    t.belongs_to :user
+    t.belongs_to :project
+  end
 end
