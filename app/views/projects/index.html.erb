@@ -1,22 +1,28 @@
 <h1>Project List</h1>
 
-<dl>
-  <% @projects.each do |project| %>
-    <dt><h4><%= link_to project.title, project %></h4></dt>
-    <dd><em><%= project.description %></em></dd>
-    <% if current_user.is_admin %>
-      <dd>
-        <div class="btn-group">
-          <div class="btn btn-mini"><%= link_to 'Edit', edit_project_path(project) %></div> |
-          <div class="btn btn-mini btn-danger"><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        </div>
-      </dd>
+<% if 0 < @projects.size %>
+  <dl>
+    <% @projects.each do |project| %>
+      <dt><h4><%= link_to project.title, project %></h4></dt>
+      <dd><em><%= project.description %></em></dd>
+      <% if current_user.is_admin %>
+        <dd>
+          <div class="btn-group">
+            <div class="btn btn-mini"><%= link_to 'Edit', edit_project_path(project) %></div> |
+            <div class="btn btn-mini btn-danger"><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          </div>
+        </dd>
+      <% end %>
     <% end %>
-  <% end %>
-</dl>
+  </dl>
+<% else %>
+  <p class="muted">There are no currently no projects available for you.</p>
+<% end %>
 
-<div class="btn-toolbar">
-  <div class="btn-group">
-    <div class="btn btn-small"><%= link_to 'New Project', new_project_path if current_user.is_admin  %></div>
+<% if current_user.is_admin %>
+  <div class="btn-toolbar">
+    <div class="btn-group">
+      <div class="btn btn-small"><%= link_to 'New Project', new_project_path %></div>
+    </div>
   </div>
-</div>
+<% end %>
