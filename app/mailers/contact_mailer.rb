@@ -1,5 +1,8 @@
 class ContactMailer < ActionMailer::Base
   default from: "Website Submission Form <webmail@tortugas-llc.com>"
+  ActionMailer::Base.smtp_settings = {
+    :openssl_verify_mode => 'none'
+  }
 
   def contact_us_email(options)
       @name = options[:name]
