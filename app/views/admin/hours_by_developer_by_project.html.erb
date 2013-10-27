@@ -18,7 +18,7 @@
       <tr>
         <td><%= result['name'] %></td>
         <td><%= result['title'] %></td>
-        <td><%= result['total'] ? result['total'] : 0 %></td>
+        <td><%= number_with_precision result['total'] ? result['total'] : 0, { :precision => 2 } %></td>
       </tr>
     <% end %>
   </tbody>

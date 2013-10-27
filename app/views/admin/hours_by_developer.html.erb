@@ -16,7 +16,7 @@
     <% @results.each do |result| %>
       <tr>
         <td><%= result['name'] %></td>
-        <td><%= result['total'] %></td>
+        <td><%= number_with_precision result['total'], { :precision => 2 } %></td>
       </tr>
     <% end %>
   </tbody>
