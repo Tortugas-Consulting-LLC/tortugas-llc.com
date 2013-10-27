@@ -27,4 +27,5 @@ TortugasLlcCom::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  config.assets.precompile += %w("js_manifests/admin-hours-by-developer-by-project.js js_manifests/admin-hours-by-developer.js")
 end

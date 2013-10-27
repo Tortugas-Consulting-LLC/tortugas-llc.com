@@ -12,6 +12,9 @@
       <li><%= link_to "http://issues.tortugas-llc.com" do %><i class="icon-bug"></i> Issue Tracker <i class="icon-external-link"></i><% end %></li>
       <% if user_signed_in? %>
         <li><%= link_to projects_path do %><i class="icon-book"></i> Projects<% end %></li>
+        <% if current_user.is_admin %>
+          <li><%= link_to admin_index_path do %><i class="icon-gears"></i> Admin<% end %></li>
+        <% end %>
         <li><%= link_to destroy_user_session_path, :method => :delete do %><i class="icon-signout"></i> Sign Out<% end %></li>
       <% else %>
         <li><%= link_to new_user_session_path do %><i class="icon-signin"></i> Sign In<% end %></li>
