@@ -14,7 +14,6 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @events = Event.where(project: @project).order('done_on desc', :user_id, :description).page(params[:page]).per(25)
-    @total = Event.where(project: @project).sum('amount')
   end
 
   # GET /projects/new

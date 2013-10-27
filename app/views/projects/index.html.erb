@@ -5,6 +5,7 @@
      <thead>
        <th>Project</th>
        <th>Description</th>
+       <th>Balance</th>
        <% if current_user.is_admin %>
          <th>Actions</th>
        <% end %>
@@ -15,6 +16,7 @@
          <tr>
            <td><%= link_to project.title, project %></td>
            <td><%= simple_format(project.description) %></td>
+           <td><%= number_with_precision project.balance, { :precision => 2 } %></td>
            <% if current_user.is_admin %>
              <td>
                <div class="btn-group">
