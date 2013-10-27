@@ -20,7 +20,7 @@
     <tbody>
       <% @events.each do |event| %>
         <tr class="<%= "success" if 0 < event.amount %>">
-          <td><%= event.for %></td>
+          <td><%= event.done_on %></td>
           <td><%= event.user.name %></td>
           <td><%= event.description %></td>
           <td><%= number_with_precision event.amount, { :precision => 2 } %></td>
