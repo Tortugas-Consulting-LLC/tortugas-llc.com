@@ -1,13 +1,13 @@
 class ProjectsController < ApplicationController
   before_action :ensure_logged_in
-  before_action :ensure_is_admin, only: [:edit, :update, :destroy]
+  before_action :ensure_is_admin, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :grab_users, only: [:edit, :new]
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all.order("title")
+    @projects = current_user.projects
   end
 
   # GET /projects/1
@@ -86,6 +86,10 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+
+      if ! @project.users.include? current_user
+        redirect_to projects_path, alert: 'You do not have permission to access this project'
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

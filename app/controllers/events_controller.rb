@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_project
   before_action :set_event, only: [:edit, :update, :destroy]
   before_action :ensure_logged_in
-  before_action :ensure_is_admin, only: [:edit, :update, :destroy]
+  before_action :ensure_is_admin, only: [:new, :create, :edit, :update, :destroy]
   before_action :grab_users, only: [:edit, :new]
 
   def edit
