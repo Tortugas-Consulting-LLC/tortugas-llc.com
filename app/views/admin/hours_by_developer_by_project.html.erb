@@ -1,4 +1,7 @@
 <% content_for :javascript_includes do %>
+  <%= javascript_include_tag "http://code.highcharts.com/highcharts.js" %>
+  <%= javascript_include_tag "http://code.highcharts.com/modules/data.js" %>
+  <%= javascript_include_tag "http://code.highcharts.com/modules/exporting.js" %>
   <%= javascript_include_tag "js_manifests/admin-hours-by-developer-by-project.js" %>
 <% end %>
 

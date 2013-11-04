@@ -5,33 +5,42 @@ function formatData() {
 
   $("table tbody tr").each(function(index, row) {
     var developer = $(row).children().eq(0).html();
-    var amount = $(row).children().eq(1).html();
+    var amount = parseFloat($(row).children().eq(1).html());
 
-    dataPoints.push({ y: amount, legendText: developer, indexLabel: developer });
+    dataPoints.push([ developer, amount ]);
   });
 
   return dataPoints;
 }
 
 function renderGraph() {
-  var chart = new CanvasJS.Chart("chartContainer",
-                                 {
-                                   backgroundColor: "transparent",
-                                   title:{
-                                     text: "Hours By Developer"
-                                   },
-                                   legend: {
-                                     verticalAlign: "bottom",
-                                     horizontalAlign: "center"
-                                   },
-                                   data: [
-                                     {
-                                       type: "pie",
-                                       showInLegend: true,
-                                       dataPoints: formatData()
-                                     }
-                                   ]
-                                 });
-
-  chart.render();
+  $('#chartContainer').highcharts({
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      backgroundColor: "transparent"
+    },
+    title: {
+      text: 'Hours By Developer'
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: false
+        },
+        showInLegend: true
+      }
+    },
+    series: [{
+      type: 'pie',
+      name: 'Work Share',
+      data: formatData()
+    }]
+  });
 }

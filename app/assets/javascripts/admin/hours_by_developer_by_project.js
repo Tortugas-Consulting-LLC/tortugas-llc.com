@@ -2,8 +2,8 @@ $(document).ready(renderGraph);
 
 function formatData() {
   var currentDev = "";
-  var allData = [];
-  var dataPoints = [];
+  var series = [];
+  var data = [];
 
   $("table tbody tr").each(function(index, row) {
     var developer = $(row).children().eq(0).html();
@@ -12,41 +12,59 @@ function formatData() {
 
     if (currentDev != developer) {
       if ( "" != currentDev ) {
-        allData.push(formatDataPointEntry(dataPoints, currentDev));
+        series.push({ name: currentDev, data: data });
       }
 
       currentDev = developer;
-      dataPoints = [];
+      data = [];
     }
 
-    dataPoints.push({ y: amount, label: project });
+    data.push(amount);
   });
 
-  allData.push(formatDataPointEntry(dataPoints, currentDev));
+  series.push({ name: currentDev, data: data });
 
-  return allData;
+  return series;
 }
 
-function formatDataPointEntry(dataPoints, developer) {
-  return { type: "bar",
-           showInLegend: true,
-           legendText: developer,
-           dataPoints: dataPoints.reverse()
-         };
+function arrayUnique(a) {
+  return a.reduce(function(uniques, c) {
+    if (uniques.indexOf(c) < 0) uniques.push(c);
+    return uniques;
+  }, []);
 }
 
 function renderGraph() {
-  var chart = new CanvasJS.Chart("chartContainer",
-                                 {
-                                   backgroundColor: "transparent",
-                                   title:{
-                                     text: "Hours By Developer By Project"
-                                   },
-                                   axisY: {
-                                     title: "Total Hours"
-                                   },
-                                   data: formatData()
-                                 });
+  var labels = $.map($("table tr td:nth-child(2)"), function(element) {
+    return $(element).html();
+  });
 
-  chart.render();
+  $('#chartContainer').highcharts({
+    chart: {
+      type: 'bar',
+      backgroundColor: 'transparent'
+    },
+    title: {
+      text: 'Hours By Developer By Project'
+    },
+    xAxis: {
+      categories: arrayUnique(labels)
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Total Hours Billed'
+      }
+    },
+    legend: {
+      backgroundColor: '#FFFFFF',
+      reversed: true
+    },
+    plotOptions: {
+      series: {
+        stacking: 'normal'
+      }
+    },
+    series: formatData()
+  });
 }
