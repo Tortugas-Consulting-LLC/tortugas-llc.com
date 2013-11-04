@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= f.label :user %><br />
-    <%= f.collection_select :user_id, @users, :id, :name %>
+    <%= f.collection_select :user_id, @users, :id, :name, { :selected => current_user.id }  %>
   </div>
 
   <div class="actions">
