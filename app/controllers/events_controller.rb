@@ -57,7 +57,7 @@ class EventsController < ApplicationController
     end
 
     def grab_users
-      @users = @project.users
+      @users = @project.users.to_a
       @users.concat(User.where(:is_admin => true))
       @users = @users.uniq
       @users.sort! { |lhs, rhs| lhs.name.downcase <=> rhs.name.downcase }
