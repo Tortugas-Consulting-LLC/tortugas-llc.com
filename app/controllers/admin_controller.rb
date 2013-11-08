@@ -18,7 +18,7 @@ class AdminController < ApplicationController
       select("-1 * sum(amount) as total, users.name, title").
       joins(:users).
       joins("LEFT JOIN events ON projects.id = events.project_id AND users.id = events.user_id AND events.amount < 0").
-      where("users.is_admin = true").
+      where("users.is_admin = ?", true).
       group("users.id, projects.id, users.name, projects.title").
       order("users.name, title").to_a
   end
