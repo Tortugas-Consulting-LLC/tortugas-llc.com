@@ -12,6 +12,7 @@
       <th>User</th>
       <th>Description</th>
       <th>Amount</th>
+      <th>Balance</th>
       <% if current_user.is_admin %>
         <th>Actions</th>
       <% end %>
@@ -24,6 +25,7 @@
           <td><%= event.user.name %></td>
           <td><%= event.description %></td>
           <td><%= number_with_precision event.amount, { :precision => 2 } %></td>
+          <td><%= number_with_precision @project.balance_as_of(event), { :precision => 2 } %></td>
 
           <% if current_user.is_admin %>
             <td>
