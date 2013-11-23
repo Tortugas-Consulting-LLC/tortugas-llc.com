@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @events = Event.where(project: @project).order('done_on desc', :user_id, :description).page(params[:page]).per(25)
+    @events = Event.where(project: @project).order('done_on desc', "id desc").page(params[:page]).per(25)
   end
 
   # GET /projects/new
