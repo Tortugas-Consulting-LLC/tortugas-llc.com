@@ -22,6 +22,7 @@
                <div class="btn-group">
                  <div class="btn btn-mini"><%= link_to 'Edit', edit_project_path(project) %></div> |
                  <div class="btn btn-mini btn-danger"><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                 <div class="btn btn-mini btn-primary"><%= link_to 'Add Event', new_project_event_path(project) %></div>
                </div>
              </td>
            <% end %>
