@@ -3,6 +3,26 @@ class Project < ActiveRecord::Base
   has_many :projects_users
   has_many :events
 
+  def hours_worked
+    sql = "
+      project_id = :project AND
+      amount < 0";
+    query_params = {
+      project: self.id,
+    }
+    Event.where(sql, query_params).sum('amount')
+  end
+
+  def hours_purchased
+    sql = "
+      project_id = :project AND
+      amount > 0";
+    query_params = {
+      project: self.id,
+    }
+    Event.where(sql, query_params).sum('amount')
+  end
+
   def balance
     Event.where(project: self).sum('amount')
   end

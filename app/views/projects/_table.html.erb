@@ -3,6 +3,8 @@
      <thead>
        <th>Project</th>
        <th>Description</th>
+       <th>Hours<br />Purchased</th>
+       <th>Hours<br />Worked</th>
        <th>Balance</th>
        <% if current_user.is_admin %>
          <th>Actions</th>
@@ -14,6 +16,8 @@
          <tr>
            <td><%= link_to project.title, project %></td>
            <td><%= simple_format(project.description) %></td>
+           <td><%= number_with_precision project.hours_purchased, { :precision => 2 } %></td>
+           <td><%= number_with_precision project.hours_worked, { :precision => 2 } %></td>
            <td><%= number_with_precision project.balance, { :precision => 2 } %></td>
            <% if current_user.is_admin %>
              <td>
