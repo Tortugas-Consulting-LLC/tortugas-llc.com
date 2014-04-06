@@ -21,6 +21,11 @@
     <%= f.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+
   <h2>Users</h2>
   <div class="field">
   <%= f.collection_check_boxes :user_ids, @users, :id, :name %>

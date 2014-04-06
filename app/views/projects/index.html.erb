@@ -1,43 +1,15 @@
 <h1>Project List</h1>
 
-<% if 0 < @projects.size %>
-   <table class="table table-striped">
-     <thead>
-       <th>Project</th>
-       <th>Description</th>
-       <th>Balance</th>
-       <% if current_user.is_admin %>
-         <th>Actions</th>
-       <% end %>
-     </thead>
-
-     <tbody>
-       <% @projects.each do |project| %>
-         <tr>
-           <td><%= link_to project.title, project %></td>
-           <td><%= simple_format(project.description) %></td>
-           <td><%= number_with_precision project.balance, { :precision => 2 } %></td>
-           <% if current_user.is_admin %>
-             <td>
-               <div class="btn-group">
-                 <div class="btn btn-mini"><%= link_to 'Edit', edit_project_path(project) %></div> |
-                 <div class="btn btn-mini btn-danger"><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-                 <div class="btn btn-mini btn-primary"><%= link_to 'Add Event', new_project_event_path(project) %></div>
-               </div>
-             </td>
-           <% end %>
-         </tr>
-       <% end %>
-     </tbody>
-   </table>
-<% else %>
-   <p class="muted">There are currently no projects available for you.</p>
-<% end %>
+<%= render :partial => 'table', :locals => { :projects => @projects } %>
 
 <% if current_user.is_admin %>
-<div class="btn-toolbar">
-  <div class="btn-group">
-    <div class="btn btn-small"><%= link_to 'New Project', new_project_path %></div>
+  <h1>Inactive Projects</h1>
+
+  <%= render :partial => 'table', :locals => { :projects => @inactive_projects } %>
+
+  <div class="btn-toolbar">
+    <div class="btn-group">
+      <div class="btn btn-small"><%= link_to 'New Project', new_project_path %></div>
+    </div>
   </div>
-</div>
 <% end %>

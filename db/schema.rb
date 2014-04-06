@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131026235557) do
+ActiveRecord::Schema.define(version: 20140405234251) do
 
   create_table "events", force: true do |t|
     t.date     "done_on"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20131026235557) do
     t.decimal  "default_rate"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "active",       default: true
   end
 
   create_table "projects_users", force: true do |t|

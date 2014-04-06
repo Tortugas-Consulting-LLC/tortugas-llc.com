@@ -7,7 +7,12 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = current_user.projects.order("title")
+    @projects, @inactive_projects = [], []
+    current_user.projects.order("title").each do |project|
+      @projects << project if project.active == true
+      @inactive_projects << project if project.active == false
+    end
+
   end
 
   # GET /projects/1
@@ -94,7 +99,7 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params[:project].permit(:title, :description, :user_ids => [])
+      params[:project].permit(:title, :description, :active, :user_ids => [])
     end
 
     def grab_users
