@@ -58,7 +58,7 @@ class AdminController < ApplicationController
   private
 
   def ensure_is_admin
-    if ! current_user.is_admin
+    if !current_user || ! current_user.is_admin
       redirect_to root_path, alert: 'You must be an admin user to perform these operations'
     end
   end
