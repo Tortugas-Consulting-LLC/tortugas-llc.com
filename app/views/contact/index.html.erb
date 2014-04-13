@@ -1,27 +1,28 @@
-<h1><%= set_then_return_title "Contact Us" %></h1>
+<h1><i class="icon-envelope"></i><%= set_then_return_title "Contact Us" %></h1>
+
 <%= form_tag(contact_index_path, :class => "form-horizontal") do %>
   <div class="control-group">
     <%= label_tag(:name, "Contact Name", :class => "control-label") %>
     <div class="controls">
-      <%= text_field_tag(:name) %>
+      <%= text_field_tag(:name, nil, class: 'input-block-level') %>
     </div>
   </div>
   <div class="control-group">
     <%= label_tag(:email, "Email", :class => "control-label") %>
     <div class="controls">
-      <%= email_field_tag(:email) %>
+      <%= email_field_tag(:email, nil, class: 'input-block-level') %>
     </div>
   </div>
   <div class="control-group">
     <%= label_tag(:subject, "Subject", :class => "control-label") %>
     <div class="controls">
-      <%= text_field_tag(:subject) %>
+      <%= text_field_tag(:subject, nil, class: 'input-block-level') %>
     </div>
   </div>
   <div class="control-group">
     <%= label_tag(:message, "Message", :class => "control-label") %>
     <div class="controls">
-      <%= text_area_tag(:message) %>
+      <%= text_area_tag(:message, nil, class: 'input-block-level') %>
     </div>
   </div>
   <div class="form-actions">

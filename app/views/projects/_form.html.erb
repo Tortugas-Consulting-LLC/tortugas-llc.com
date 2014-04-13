@@ -1,37 +1,45 @@
-<%= form_for(@project) do |f| %>
+<%= form_for(@project, :html => { :class => 'form-horizontal' }) do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
       <ul>
-      <% @project.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @project.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'input-block-level' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, :class => 'input-block-level' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :active %><br />
-    <%= f.check_box :active %>
+  <div class="control-group">
+    <%= f.label :active, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :active %>
+    </div>
   </div>
 
-  <h2>Users</h2>
-  <div class="field">
-  <%= f.collection_check_boxes :user_ids, @users, :id, :name %>
+  <div class="control-group">
+    <div class="controls">
+      <h2>Users</h2>
+      <%= f.collection_check_boxes :user_ids, @users, :id, :name %>
+    </div>
   </div>
 
-  <div class="actions">
+  <div class="form-actions">
     <%= f.submit  class: 'btn btn-primary' %>
   </div>
 <% end %>
