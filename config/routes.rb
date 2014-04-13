@@ -2,6 +2,7 @@ TortugasLlcCom::Application.routes.draw do
   get "admin/index"
   get "admin/hours_by_developer"
   get "admin/hours_by_developer_by_project"
+  get "admin/weekly_monthly_hours"
   devise_for :users
   get "contact/index"
   post "contact/index", to: "contact#send_email"
