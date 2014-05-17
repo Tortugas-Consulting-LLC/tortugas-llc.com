@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :ensure_logged_in
   before_action :ensure_is_admin, only: [:new, :create, :edit, :update, :destroy]
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :destroy, :issues]
   before_action :grab_users, only: [:edit, :new]
 
   # GET /projects
@@ -75,6 +75,11 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def issues
+    service = Jira.new
+    @issues = service.find_issues_by_project(@project)
+  end
+
   private
     def ensure_logged_in
       if ! user_signed_in?
@@ -99,7 +104,7 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params[:project].permit(:title, :description, :active, :user_ids => [])
+      params[:project].permit(:title, :description, :active, :jira_key, :user_ids => [])
     end
 
     def grab_users

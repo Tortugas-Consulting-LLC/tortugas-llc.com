@@ -56,6 +56,9 @@ GEM
       railties (>= 3.2, < 5.0)
     highline (1.6.19)
     hike (1.2.3)
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.5)
     jbuilder (1.5.0)
       activesupport (>= 3.0.0)
@@ -74,6 +77,7 @@ GEM
     mime-types (1.24)
     minitest (4.7.5)
     multi_json (1.7.9)
+    multi_xml (0.5.5)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -153,6 +157,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (= 3.0.0.rc)
   font-awesome-rails
+  httparty
   jbuilder (~> 1.2)
   jquery-rails
   kaminari

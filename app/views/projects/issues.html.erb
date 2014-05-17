@@ -1,0 +1,26 @@
+<h1>List of Current Issues</h1>
+
+<% if 0 < @issues.size %>
+   <table class="table table-striped">
+     <thead>
+       <th>ID</th>
+       <th>Issue Type</th>
+       <th>Summary</th>
+       <th>Status</th>
+       <th>Assigned To</th>
+     </thead>
+     <tbody>
+       <% @issues.each do |issue| %>
+         <tr>
+           <td><%= issue["key"] %></td>
+           <td><%= issue["fields"]["issuetype"]["name"] %></td>
+           <td><%= issue["fields"]["summary"] %></td>
+           <td><%= issue["fields"]["status"]["name"] %></td>
+           <td><%= issue["fields"]["assignee"].nil? ? "Unassigned" : issue["fields"]["assignee"]["displayName"] %></td>
+         </tr>
+       <% end %>
+     </tbody>
+   </table>
+<% else %>
+  <p class="muted">There are currently no issues availble for viewing.</p>
+<% end %>

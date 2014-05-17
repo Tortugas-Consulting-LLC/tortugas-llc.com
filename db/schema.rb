@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140405234251) do
+ActiveRecord::Schema.define(version: 20140517165028) do
 
   create_table "events", force: true do |t|
     t.date     "done_on"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20140405234251) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "active",       default: true
+    t.string   "jira_key",     default: ""
   end
 
   create_table "projects_users", force: true do |t|
@@ -54,7 +55,7 @@ ActiveRecord::Schema.define(version: 20140405234251) do
     t.string   "name"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

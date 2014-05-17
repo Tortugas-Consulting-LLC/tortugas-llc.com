@@ -9,7 +9,6 @@
       <li><%= link_to root_path do %><i class="icon-home"></i> Home<% end %></li>
       <li><%= link_to about_index_path do %><i class="icon-question-sign"></i> About Us<% end %></li>
       <li><%= link_to contact_index_path do %><i class="icon-envelope"></i> Contact<% end %></li>
-      <li><%= link_to "http://issues.tortugas-llc.com" do %><i class="icon-bug"></i> Issue Tracker <i class="icon-external-link"></i><% end %></li>
       <% if user_signed_in? %>
         <li><%= link_to projects_path do %><i class="icon-book"></i> Projects<% end %></li>
         <% if current_user.is_admin %>

@@ -2,6 +2,7 @@
 <p><em><%= @project.description %></em></p>
 
 <p>Current balance is: <%= number_with_precision @project.balance, { :precision => 2 } %> hours</p>
+<button class="btn btn-small btn-info"><%= link_to 'View Issues', projects_issues_path(@project) %></button>
 
 <%= paginate @events %>
 

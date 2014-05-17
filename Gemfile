@@ -58,3 +58,4 @@ gem 'kaminari'
 
 gem 'font-awesome-rails'
 gem 'unicorn'
+gem 'httparty'
