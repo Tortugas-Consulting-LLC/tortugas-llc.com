@@ -9,7 +9,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "https://github.com/Tortugas-Consulting-LLC/tortugas-llc.com.git"
+set :repository, "git@bitbucket.org:tortugas/tortugas-llc.com.git"
 set :branch, "master"
 
 
