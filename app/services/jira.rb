@@ -11,7 +11,7 @@ class Jira
   def find_issues_by_project(project)
     return [] if project.jira_key.blank?
 
-    response = self.class.get("/search?project=" + project.jira_key)
+    response = self.class.get("/search?jql=project=" + project.jira_key)
 
     return [] if response.code != 200
 
