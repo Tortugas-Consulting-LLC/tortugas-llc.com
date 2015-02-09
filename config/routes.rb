@@ -11,8 +11,6 @@ TortugasLlcCom::Application.routes.draw do
   get "about/recommendations"
   get "home/index"
 
-  get "projects/:id/issues", to: "projects#issues", as: "projects_issues"
-
   resources :projects do
     resources :events
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140517165028) do
+ActiveRecord::Schema.define(version: 20150209025858) do
 
   create_table "events", force: true do |t|
     t.date     "done_on"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20140517165028) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "active",       default: true
-    t.string   "jira_key",     default: ""
   end
 
   create_table "projects_users", force: true do |t|
