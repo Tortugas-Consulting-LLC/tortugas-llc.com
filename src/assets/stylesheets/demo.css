@@ -15,14 +15,14 @@
 
 #wrapper {
   background-position: center -130px;
-  background-image: url("../images/demo/bg_wrapper.jpg"); }
+  background-image: url("../images/bg_wrapper.jpg"); }
   @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
     #wrapper {
-      background-image: url("../images/demo/bg_wrapper@2x.jpg");
+      background-image: url("../images/bg_wrapper@2x.jpg");
       background-size: 1920px 535px; } }
 
 body.error-page, body.countdown-page {
-  background: url("../images/demo/bg_fullsize.jpg") no-repeat center center fixed;
+  background: url("../images/bg_fullsize.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -34,12 +34,12 @@ body.error-page, body.countdown-page {
 
 .hero-carousel .forest {
   background-position: center;
-  background-image: url("../images/demo/carousels/forest.jpg"); }
+  background-image: url("../images/carousels/forest.jpg"); }
 .hero-carousel .sea {
-  background-image: url("../images/demo/carousels/sea.jpg"); }
+  background-image: url("../images/carousels/sea.jpg"); }
 .hero-carousel .bokeh {
   background-position: center;
-  background-image: url("../images/demo/carousels/bokeh.jpg"); }
+  background-image: url("../images/carousels/bokeh.jpg"); }
 
 .homepage.fullsize #wrapper {
   background-image: none; }
@@ -49,10 +49,10 @@ body.error-page, body.countdown-page {
       background-size: 1920px 535px; } }
 
 .homepage.black-and-white #wrapper {
-  background-image: url("../images/demo/bg_wrapper_bw.jpg"); }
+  background-image: url("../images/bg_wrapper_bw.jpg"); }
   @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
     .homepage.black-and-white #wrapper {
-      background-image: url("../images/demo/bg_wrapper_bw@2x.jpg");
+      background-image: url("../images/bg_wrapper_bw@2x.jpg");
       background-size: 1920px 535px; } }
 
 @media (max-width: 767px) and (orientation: portrait) {

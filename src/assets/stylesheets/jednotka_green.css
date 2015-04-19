@@ -5853,7 +5853,9 @@ body.boxed #scroll-to-top {
           -webkit-border-bottom-right-radius: 0;
           border-bottom-right-radius: 0; } }
     #header .navbar-default.navbar-collapsed-sm .navbar-brand {
+      color: #fff;
       padding: 0;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
       float: none;
       height: 90px;
       display: table-cell;
@@ -6781,6 +6783,7 @@ pre {
 .quotes .carousel .carousel-inner {
   padding-bottom: 20px; }
 .quotes .quote .lead {
+  text-align: justify;
   font-size: 18px;
   line-height: 30px;
   color: #676f7a;
