@@ -1,0 +1,49 @@
+{
+  "name": "tortugas-llccom",
+  "description": "The website of Tortugas Consulting, LLC.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/keelerm84/tortugas-llccom",
+  "author": {
+    "name": "Matthew M. Keeler",
+    "url": "http://github.com/keelerm84/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/keelerm84/tortugas-llccom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/keelerm84/tortugas-llccom/issues"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "test": "grunt assemble"
+  },
+  "devDependencies": {
+    "assemble": "^0.4.42",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "load-grunt-tasks": "^0.6.0",
+    "time-grunt": "^1.0.0",
+    "assemble-contrib-permalinks": "*",
+    "assemble-contrib-sitemap": "*"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/keelerm84/tortugas-llccom/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "assemble",
+    "templates",
+    "handlebars",
+    "site generator",
+    "site builder",
+    "grunt"
+  ]
+}
