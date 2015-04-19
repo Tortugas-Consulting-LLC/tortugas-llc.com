@@ -90,7 +90,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'src/assets/',
         src: '**',
-        dest: '<%= config.dist %>/assets/css/'
+        dest: '<%= config.dist %>/assets/'
       }
     },
 
