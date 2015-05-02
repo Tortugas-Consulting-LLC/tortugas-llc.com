@@ -74,7 +74,7 @@ module.exports = function(grunt) {
           partials: '<%= config.src %>/templates/partials/*.hbs',
           plugins: ['assemble-contrib-permalinks','assemble-contrib-sitemap'],
           permalinks: {
-              preset: 'pretty'
+            preset: 'pretty'
           }
         },
         files: {
@@ -95,6 +95,12 @@ module.exports = function(grunt) {
         cwd: 'src/assets/',
         src: '**',
         dest: '<%= config.dist %>/assets/'
+      },
+      cname: {
+        expand: true,
+        cwd: 'src',
+        src: 'CNAME',
+        dest: '<%= config.dist %>/'
       }
     },
 
