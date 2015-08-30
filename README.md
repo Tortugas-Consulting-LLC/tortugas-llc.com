@@ -15,8 +15,7 @@ the checkout.
 
 To publish the changes to the site, one must run
 
-    grunt clean
-    grunt gh-pages-clean
+    grunt build
     grunt gh-pages
 
 ## [Built Using Assemble](http://assemble.io/)
