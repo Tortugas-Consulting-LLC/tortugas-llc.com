@@ -1,0 +1,19 @@
+- name: "PHP"
+  level: 95
+  color: "#8dc153"
+
+- name: "Node.js"
+  level: 70
+  color: "#8dc153"
+
+- name: "Ruby"
+  level: 85
+  color: "#8dc153"
+
+- name: "Python"
+  level: 80
+  color: "#8dc153"
+
+- name: "React"
+  level: 75
+  color: "#8dc153"

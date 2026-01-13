@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="section">
+  <div class="container mx-auto px-4">
+    <header class="section-header">
+      <h1 class="section-title">{{ .Title }}</h1>
+      {{ if .Params.subtitle }}
+        <p class="section-subtitle">{{ .Params.subtitle }}</p>
+      {{ end }}
+    </header>
+
+    {{ partial "portfolio/filter.html" . }}
+
+    <div id="portfolio-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{ range .Pages.ByWeight }}
+        {{ partial "portfolio/card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio filtering JavaScript -->
+<script>
+  {{ $portfolioFilter := resources.Get "js/portfolio-filter.js" }}
+  {{ if $portfolioFilter }}
+    {{ $portfolioFilter = $portfolioFilter | minify }}
+    {{ $portfolioFilter.Content | safeJS }}
+  {{ end }}
+</script>
+{{ end }}
