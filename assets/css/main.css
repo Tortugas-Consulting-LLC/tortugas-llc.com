@@ -44,22 +44,9 @@
     @apply bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl;
   }
 
-  /* Portfolio Filter */
-  .filter-btn {
-    @apply px-6 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-medium transition-all duration-200 hover:border-primary-500 hover:text-primary-600;
-  }
-
-  .filter-btn.active {
-    @apply bg-primary-600 text-white border-primary-600;
-  }
-
   /* Portfolio Item */
   .portfolio-item {
-    @apply transition-all duration-300 opacity-100 scale-100;
-  }
-
-  .portfolio-item.hidden {
-    @apply opacity-0 scale-95 h-0 overflow-hidden;
+    @apply transition-shadow duration-300;
   }
 
   /* Browser Window Mockup */

@@ -8,22 +8,11 @@
       {{ end }}
     </header>
 
-    {{ partial "portfolio/filter.html" . }}
-
-    <div id="portfolio-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
       {{ range .Pages.ByWeight }}
         {{ partial "portfolio/card.html" . }}
       {{ end }}
     </div>
   </div>
 </div>
-
-<!-- Portfolio filtering JavaScript -->
-<script>
-  {{ $portfolioFilter := resources.Get "js/portfolio-filter.js" }}
-  {{ if $portfolioFilter }}
-    {{ $portfolioFilter = $portfolioFilter | minify }}
-    {{ $portfolioFilter.Content | safeJS }}
-  {{ end }}
-</script>
 {{ end }}
