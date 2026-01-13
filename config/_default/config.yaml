@@ -1,0 +1,52 @@
+baseURL: "https://tortugas-llc.com/"
+languageCode: "en-us"
+title: "Tortugas Consulting, LLC"
+theme: []
+
+# Build settings
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: false
+
+# Taxonomies for portfolio filtering
+taxonomies:
+  technology: technologies
+
+# Output formats
+outputs:
+  home:
+    - HTML
+    - RSS
+  section:
+    - HTML
+
+# Markup
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # Allow raw HTML in markdown
+  highlight:
+    style: monokai
+    lineNos: false
+
+# Image processing
+imaging:
+  resampleFilter: "Lanczos"
+  quality: 85
+  anchor: "Smart"
+
+# Minification (production)
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# Permalinks - preserve existing URL structure
+permalinks:
+  portfolio: "/:contentbasename/"
+
+# Related content
+related:
+  includeNewer: true
+  indices:
+    - name: technologies
+      weight: 100

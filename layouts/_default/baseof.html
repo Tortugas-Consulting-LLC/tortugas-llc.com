@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" class="scroll-smooth">
+{{ partial "head.html" . }}
+<body class="antialiased flex flex-col min-h-screen">
+  <div id="wrapper" class="flex flex-col min-h-screen">
+    {{ partial "navbar.html" . }}
+
+    {{ block "hero" . }}{{ end }}
+
+    <main id="main" role="main" class="flex-grow">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+  </div>
+
+  <!-- Scroll to top button -->
+  <button
+    id="scroll-to-top"
+    class="scroll-to-top hidden"
+    aria-label="Scroll to top"
+  >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+
+  <!-- JavaScript -->
+  {{ $main := resources.Get "js/main.js" }}
+  {{ if $main }}
+    {{ $main = $main | minify }}
+    <script src="{{ $main.RelPermalink }}" defer></script>
+  {{ end }}
+</body>
+</html>

@@ -1,0 +1,45 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
+      {{ .Site.Title }}
+    </h1>
+    <p class="text-xl md:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto animate-fade-in-delay">
+      We serve by building relationships
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
+      <a href="/portfolio/" class="btn btn-contrast">
+        View Our Work
+      </a>
+      <a href="/about/" class="btn btn-outline bg-white text-primary-600 hover:bg-primary-50">
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .animate-fade-in-delay {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  }
+
+  .animate-fade-in-delay-2 {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  }
+</style>

@@ -1,50 +1,31 @@
 {
-  "name": "tortugas-llc.com",
-  "description": "The website of Tortugas Consulting, LLC.",
-  "version": "0.1.0",
-  "homepage": "https://github.com/keelerm84/tortugas-llc.com",
-  "author": {
-    "name": "Matthew M. Keeler",
-    "url": "http://github.com/keelerm84/"
+  "name": "tortugas-llc-hugo",
+  "version": "2.0.0",
+  "description": "Modern Hugo-based website for Tortugas Consulting, LLC",
+  "scripts": {
+    "dev": "hugo server --buildDrafts --buildFuture --disableFastRender",
+    "build": "hugo --minify --gc",
+    "preview": "hugo server --buildDrafts --buildFuture --renderToDisk",
+    "clean": "rm -rf public resources .hugo_build.lock"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/keelerm84/tortugas-llc.com.git"
   },
-  "bugs": {
-    "url": "https://github.com/keelerm84/tortugas-llc.com/issues"
+  "author": {
+    "name": "Matthew M. Keeler",
+    "url": "http://github.com/keelerm84/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.0"
   },
   "engines": {
-    "node": ">=0.10"
-  },
-  "scripts": {
-    "test": "grunt assemble"
-  },
-  "devDependencies": {
-    "assemble": "^0.4.42",
-    "assemble-contrib-permalinks": "*",
-    "assemble-contrib-sitemap": "*",
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-connect": "^0.8.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-gh-pages": "^0.10.0",
-    "load-grunt-tasks": "^0.6.0",
-    "time-grunt": "^1.0.0"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/keelerm84/tortugas-llc.com/blob/master/LICENSE-MIT"
-    }
-  ],
-  "keywords": [
-    "assemble",
-    "templates",
-    "handlebars",
-    "site generator",
-    "site builder",
-    "grunt"
-  ]
+    "node": ">=20.0.0"
+  }
 }

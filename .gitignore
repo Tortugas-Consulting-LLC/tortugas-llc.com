@@ -1,21 +1,53 @@
-lib-cov
-*.seed
+# Hugo
+/public/
+/resources/
+.hugo_build.lock
+
+# Node
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-*
+
+# Logs
+logs/
+results/
+pids/
 *.log
 *.csv
 *.dat
 *.out
 *.pid
 *.gz
-*.yo-rc.json
 
-pids
-logs
-results
+# Environment
+.env
+.env.local
+.env.*.local
 
-npm-debug.log
-node_modules
-
-*.sublime-*
+# Old build artifacts
+lib-cov/
 dist/
+.tmp/
 bower_components/
 /.grunt/
+*.yo-rc.json
+*.seed

@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="section">
+  <div class="container mx-auto px-4">
+    <article class="max-w-4xl mx-auto">
+      <header class="mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {{ .Title }}
+        </h1>
+        {{ if .Params.subtitle }}
+          <p class="text-xl text-gray-600">{{ .Params.subtitle }}</p>
+        {{ end }}
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</div>
+{{ end }}

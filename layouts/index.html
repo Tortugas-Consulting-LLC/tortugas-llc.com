@@ -1,0 +1,167 @@
+{{ define "hero" }}
+  {{ partial "hero.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div id="main-content">
+  <!-- Feature Panels Section -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Panel 1: Variety of Languages -->
+        <article class="card group hover:shadow-2xl">
+          <div class="p-8 text-center">
+            <div class="mb-6 flex justify-center">
+              <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center group-hover:bg-primary-200 transition-colors">
+                <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">A Variety of Languages</h3>
+            <p class="text-gray-700 leading-relaxed">
+              From dynamic languages like PHP and Ruby to strongly typed languages like C++ and Java,
+              we have the expertise you're looking for.
+            </p>
+          </div>
+        </article>
+
+        <!-- Panel 2: More Than Just Coding -->
+        <article class="card group hover:shadow-2xl">
+          <div class="p-8 text-center">
+            <div class="mb-6 flex justify-center">
+              <div class="w-16 h-16 bg-contrast-100 rounded-full flex items-center justify-center group-hover:bg-contrast-200 transition-colors">
+                <svg class="w-8 h-8 text-contrast-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">More Than Just Coding</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Good software developers write good code. Great developers understand the business.
+              We know the importance of balancing practicality with perfection, ensuring we always deliver the highest business value possible.
+            </p>
+          </div>
+        </article>
+
+        <!-- Panel 3: Already Have a Team? -->
+        <article class="card group hover:shadow-2xl">
+          <div class="p-8 text-center">
+            <div class="mb-6 flex justify-center">
+              <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center group-hover:bg-yellow-200 transition-colors">
+                <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Already Have a Team?</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Your company may already have a software team at your disposal, but the team is missing some critical experience.
+              We can provide guidance in these areas to help boost your team's effectiveness.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & Value Section -->
+  <section class="section">
+    <div class="container mx-auto px-4">
+      <!-- Pricing -->
+      <div class="mb-16 flex flex-col md:flex-row items-center gap-8">
+        <div class="w-full md:w-1/2">
+          <div class="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
+            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">Pricing</h3>
+          <p class="text-gray-700 leading-relaxed text-lg">
+            Our affordable and flexible approach to pricing makes starting any project a breeze.
+            Whether you want to buy in bulk up front, or if you prefer a pay-as-you-go format,
+            Tortugas' metered development model can help address any company's budgeting needs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="my-12 border-gray-300">
+
+      <!-- Maximizing Value -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+        <div class="w-full md:w-1/2">
+          <div class="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
+            <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">Maximizing Value</h3>
+          <p class="text-gray-700 leading-relaxed text-lg mb-4">
+            Tortugas Consulting utilizes its experience to understand your business and help provide
+            the most appropriate solution so you can focus on doing what you do best; running your business.
+          </p>
+          <p class="text-gray-700 leading-relaxed text-lg">
+            We know the software we build has an impact on your lives. Your co-workers and clients are
+            going to use it on a daily basis. Working closely with you, we will develop solutions that
+            fit your needs at a price you can afford.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="section-header">
+        <div class="flex items-center justify-center mb-4">
+          <svg class="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+          </svg>
+        </div>
+        <h2 class="section-title">Testimonials</h2>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        {{ range $index, $testimonial := .Site.Data.testimonials }}
+          <div class="card mb-8">
+            <div class="p-8 md:p-12">
+              <div class="mb-6">
+                <svg class="w-10 h-10 text-primary-200" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
+                </svg>
+              </div>
+
+              {{ if $testimonial.fullQuote }}
+                {{ range split $testimonial.fullQuote "\n" }}
+                  <p class="text-lg text-gray-700 leading-relaxed mb-4">{{ . }}</p>
+                {{ end }}
+              {{ else }}
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">{{ $testimonial.quote }}</p>
+              {{ end }}
+
+              <div class="mt-8 pt-6 border-t border-gray-200">
+                <p class="font-bold text-gray-900 text-lg">{{ $testimonial.name }}</p>
+                <p class="text-gray-600">
+                  {{ if $testimonial.url }}
+                    <a href="{{ $testimonial.url }}" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 transition">
+                      {{ $testimonial.company }}
+                    </a>
+                  {{ else }}
+                    {{ $testimonial.company }}
+                  {{ end }}
+                </p>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

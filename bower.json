@@ -1,8 +1,0 @@
-{
-  "name": "tortugas-llc.com",
-  "version": "0.1.0",
-  "dependencies": {
-    "bootstrap": "~3.2.0"
-  },
-  "private": true
-}
