@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MySQL on Tortugas Consulting, LLC</title>
+    <link>https://tortugas-llc.com/technologies/mysql/</link>
+    <description>Recent content in MySQL on Tortugas Consulting, LLC</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>projects@tortugas-llc.com (Matthew M. Keeler)</managingEditor>
+    <webMaster>projects@tortugas-llc.com (Matthew M. Keeler)</webMaster>
+    <lastBuildDate>Tue, 13 Jan 2026 17:12:33 -0500</lastBuildDate>
+    <atom:link href="https://tortugas-llc.com/technologies/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Natural Organic Warehouse</title>
+      <link>https://tortugas-llc.com/natural-organic-warehouse/</link>
+      <pubDate>Thu, 01 Sep 2011 00:00:00 +0000</pubDate><author>projects@tortugas-llc.com (Matthew M. Keeler)</author>
+      <guid>https://tortugas-llc.com/natural-organic-warehouse/</guid>
+      <description>&lt;p&gt;Natural Organic Warehouse is a leading distributor of natural and organic food products.&lt;/p&gt;&#xA;&lt;p&gt;We partnered with Natural Organic Warehouse to develop a comprehensive website and backend database system. The custom application streamlines their operations, manages inventory, and provides their team with powerful tools to serve their customers more effectively.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

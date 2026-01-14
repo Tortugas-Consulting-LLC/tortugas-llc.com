@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on Tortugas Consulting, LLC</title>
+    <link>https://tortugas-llc.com/technologies/ruby/</link>
+    <description>Recent content in Ruby on Tortugas Consulting, LLC</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>projects@tortugas-llc.com (Matthew M. Keeler)</managingEditor>
+    <webMaster>projects@tortugas-llc.com (Matthew M. Keeler)</webMaster>
+    <lastBuildDate>Tue, 13 Jan 2026 17:12:33 -0500</lastBuildDate>
+    <atom:link href="https://tortugas-llc.com/technologies/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Young Life Global Leaders</title>
+      <link>https://tortugas-llc.com/young-life-leaders/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate><author>projects@tortugas-llc.com (Matthew M. Keeler)</author>
+      <guid>https://tortugas-llc.com/young-life-leaders/</guid>
+      <description>&lt;p&gt;Young Life Developing Global Leaders is a non-profit organization focused on training and developing leaders around the world.&lt;/p&gt;&#xA;&lt;p&gt;We developed a custom Ruby on Rails application for Young Life Global Leaders to manage their programs, track participants, and provide resources for leaders worldwide. The platform has been instrumental in helping them scale their impact globally.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Young Life Wichita</title>
+      <link>https://tortugas-llc.com/young-life-wichita/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate><author>projects@tortugas-llc.com (Matthew M. Keeler)</author>
+      <guid>https://tortugas-llc.com/young-life-wichita/</guid>
+      <description>&lt;p&gt;Young Life Wichita is a local chapter of Young Life, a Christian youth ministry organization.&lt;/p&gt;&#xA;&lt;p&gt;We created a dynamic website for Young Life Wichita using Ruby on Rails to help them connect with students, share updates, and manage their events and programs. The site serves as a vital communication tool for their ministry in the Wichita area.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

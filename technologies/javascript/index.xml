@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on Tortugas Consulting, LLC</title>
+    <link>https://tortugas-llc.com/technologies/javascript/</link>
+    <description>Recent content in JavaScript on Tortugas Consulting, LLC</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>projects@tortugas-llc.com (Matthew M. Keeler)</managingEditor>
+    <webMaster>projects@tortugas-llc.com (Matthew M. Keeler)</webMaster>
+    <lastBuildDate>Tue, 13 Jan 2026 17:12:33 -0500</lastBuildDate>
+    <atom:link href="https://tortugas-llc.com/technologies/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Panna</title>
+      <link>https://tortugas-llc.com/panna/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate><author>projects@tortugas-llc.com (Matthew M. Keeler)</author>
+      <guid>https://tortugas-llc.com/panna/</guid>
+      <description>&lt;p&gt;Panna is an innovative cooking platform that brings professional culinary instruction to home cooks through engaging video content.&lt;/p&gt;&#xA;&lt;p&gt;We partnered with Panna to build key features of their web platform, combining PHP backend services with a modern React frontend. Our work helped create an interactive and engaging experience for users learning to cook from world-class chefs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Startup Wichita</title>
+      <link>https://tortugas-llc.com/startup-wichita/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate><author>projects@tortugas-llc.com (Matthew M. Keeler)</author>
+      <guid>https://tortugas-llc.com/startup-wichita/</guid>
+      <description>&lt;p&gt;Startup Wichita is a community organization dedicated to fostering entrepreneurship and innovation in Wichita, Kansas.&lt;/p&gt;&#xA;&lt;p&gt;We built a modern web platform using Node.js to help connect entrepreneurs, provide resources, and showcase the vibrant startup ecosystem in Wichita. The platform serves as a central hub for the local startup community.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
